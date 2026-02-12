@@ -1,0 +1,48 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* responsive imgs */
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+/* decoration off */
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* interactive elements reset */
+
+button {
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-family: inherit;
+    color: inherit;
+}
+
+/* anti-outline (accessible friendly) */
+
+button:focus,
+a:focus {
+    /* remove default browser outline on click */
+    outline: none;
+}
+
+button:focus-visible,
+a:focus-visible {
+    /* custom outline only for keyboard navigation */
+    outline: 2px solid var(--off-white);
+    outline-offset: 3px;
+}

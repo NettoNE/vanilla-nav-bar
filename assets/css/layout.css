@@ -1,0 +1,147 @@
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/Inter/Inter-VariableFont_opsz,wght.ttf') format('truetype-variations');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    /* font */
+    --font-main: "Inter", sans-serif;
+
+    --fw-regular: 400;
+    --fw-medium: 550;
+    --fw-bold: 700;
+
+    --fs-title: 2rem;
+    --fs-icon: 1.5rem;
+
+    /* colors */
+    --bg-color: #151515;
+    --bg-element-color: #9f9f9f;
+    --bg-element-color-hover: #b0afaf;
+
+    --total-black: #000000;
+    --off-white: #ececec;
+}
+
+body {
+    /* font */
+    font-family: var(--font-main);
+    font-weight: var(--fw-regular);
+    color: var(--off-white);
+
+    background-color: var(--bg-color);
+}
+
+/* menu */
+
+.nav-menu {
+    display: flex;
+    flex-direction: column;
+
+    background-color: var(--bg-element-color);
+}
+
+.nav-top {
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+
+    padding: 1rem;
+}
+
+.title {
+    font-size: var(--fs-title);
+    font-weight: var(--fw-bold);
+}
+
+.mobile-menu-btn {
+    display: flex;
+
+    border: none;
+    cursor: pointer;
+    color: var(--off-white);
+    background-color: transparent;
+}
+
+.mobile-menu-icon {
+    font-size: var(--fs-icon);
+}
+
+.nav-links {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+}
+
+.nav-links li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+
+    padding: 1rem;
+
+    border-top: 1px solid var(--total-black);
+
+    transition: background-color 0.2s ease-in-out;
+}
+
+.nav-links li:last-child {
+    border-bottom: 1px solid var(--total-black);
+}
+
+.nav-links li:hover {
+    background-color: var(--bg-element-color-hover);
+}
+
+/* special */
+
+.is-active {
+    display: flex;
+}
+
+.push {
+    margin-right: auto;
+}
+
+/* desktop layout */
+@media (min-width: 991.98px) {
+
+    .mobile-menu-btn {
+        display: none;
+    }
+
+    .nav-menu,
+    .nav-top {
+        flex-direction: row;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: row;
+        
+        width: auto;
+
+        margin-right: 1rem;
+    }
+
+    .nav-links li {
+        padding: 1rem;
+
+        border-radius: 3px;
+    }
+
+    .nav-links li,
+    .nav-links li:last-child {
+        border: none;
+    }
+
+}
